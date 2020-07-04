@@ -1,0 +1,9 @@
+{
+    "/imagecomparision/*": {
+        "target": "http://localhost:9081",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+    }
+}

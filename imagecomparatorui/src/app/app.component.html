@@ -1,0 +1,90 @@
+
+<div class="container">
+<h2>CMS Automation</h2>
+</div>
+<br/>
+<div class="container">
+
+
+
+<div class="row">
+<div class="col-sm-4">
+            <label for="country">Countries:</label>
+            <select  class="form-control" (change)="changeCountry($event)">
+                <option disabled>Select country</option>
+                <option>Choose country</option>
+                <option *ngFor="let country of countries">{{country}}</option>
+            </select>
+</div>
+
+<div class="col-sm-4">
+	     <label for="segment">Segments:</label>
+            <select  class="form-control" (change)="changeSegment($event)">
+                <option disabled>Select segment</option>
+                <option>Choose segment</option>
+                <option *ngFor="let segment of segments">{{segment}}</option>
+            </select></div>
+<div class="col-sm-4"><label for="status">Status:</label>
+            <select  class="form-control" (change)="changeStatus($event)">
+                <option disabled>Select status</option>
+                <option>Choose status</option>
+                <option *ngFor="let status of statusList">{{status}}</option>
+            </select></div>
+</div>
+<br/>
+<div class="row">
+<div class="col-sm-4"><label for="url">Urls:</label>
+            <select  class="form-control" (change)="changeUrl($event)">
+                <option disabled>Select url</option>
+                <option>Choose url</option>
+                <option *ngFor="let url of urls">{{url}}</option>
+            </select></div>
+</div>
+           
+
+  
+<br/>
+<br/>
+<div class="row">
+<div class="col-sm-6"><label for="sno">SNO:</label>
+{{imageResponse.sno}}
+</div>
+<div class="col-sm-6"><label for="runId">Run Id:</label>
+{{imageResponse.runid}}
+</div></div>
+<br/>
+<div class="row">
+<div class="col-sm-6">
+<label for="sno">Exp screenshot timestamp:</label>
+{{imageResponse.exp_screenshot_timestamp}}
+</div>
+<div class="col-sm-6">
+<label for="sno">Act screenshot timestamp:</label>
+{{imageResponse.act_screenshot_timestamp}}
+</div>
+</div><br/>
+<div class="row">
+<div class="col-sm-6">
+<label for="sno">Exp screenshot:</label>
+</div>
+<div class="col-sm-6">
+<label for="sno">Act screenshot:</label>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<img class="float-left img-fluid" id="myimage" [src]='thumbnail1' /></div>
+<div class="col-sm-6"><img class="float-right img-fluid" id="myimage" [src]='thumbnail2' /></div>
+</div>
+ <br/>
+ <div class="row">
+<div class="col-sm-4"><label for="status">STATUS:</label>
+{{imageResponse.status}}
+</div>
+</div>
+
+   
+
+</div>
+
+
