@@ -69,4 +69,10 @@ public class ImageComparisionController {
         return repo.findById(compositeId);
 
     }
+
+    @PostMapping(path="getImagesPost")
+    public @ResponseBody
+    Optional<Testresultimagecomparison> getRecordByCompositeKeyPost(@RequestBody CompositeId compositeId){
+        return repo.findById(compositeId);
+    }
 }
